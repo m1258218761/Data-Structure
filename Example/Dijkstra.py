@@ -1,12 +1,14 @@
 #coding=utf-8
-'''Dijkstr(迪杰斯特拉)算法，用于求图中指定两点之间的最短路径，或者是指定一点到其它所有点之间的最短路径'''
+'''
+Dijkstr(迪杰斯特拉)算法，用于求图中指定两点之间的最短路径，或者是指定一点到其它所有点之间的最短路径
+'''
 
 def dijkstra(graph, startIndex, path, cost, max):
-    """
+    '''
     求解各节点最短路径，获取path，和cost数组，
     path[i] 表示vi节点的前继节点索引，一直追溯到起点。
     cost[i] 表示vi节点的花费
-    """
+    '''
     lenth = len(graph)
     v = [0] * lenth
     # 初始化 path，cost，V
@@ -16,7 +18,6 @@ def dijkstra(graph, startIndex, path, cost, max):
         else:
             cost[i] = graph[startIndex][i]
             path[i] = (startIndex if (cost[i] < max) else -1)
-    # print v, cost, path
     for i in range(1, lenth):
         minCost = max
         curNode = -1
@@ -24,7 +25,6 @@ def dijkstra(graph, startIndex, path, cost, max):
             if v[w] == 0 and cost[w] < minCost:
                 minCost = cost[w]
                 curNode = w
-        # for 获取最小权值的节点
         if curNode == -1: break
         # 剩下都是不可通行的节点，跳出循环
         v[curNode] = 1
