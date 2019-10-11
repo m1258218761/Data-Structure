@@ -10,7 +10,7 @@ Out-place:占用额外内存
 2   选择排序    O(n^2)           O(n^2)       O(n^2)         O(1)         In-place   False
 3   插入排序    O(n^2)           O(n)         O(n^2)         O(1)         In-place   True
 4   希尔排序    O(n log n)       O(n log^2 n) O(n log^2 n)   O(1)         In-place   False
-5   归并排序    O(n log n)       O(n log n)q  O(n log n)     O(n)         Out-place  True
+5   归并排序    O(n log n)       O(n log n)   O(n log n)     O(n)         Out-place  True
 6   快速排序    O(n log n)       O(n log n)   O(n^2)         O(log n)     In-place   False
 7   堆排序      O(n log n)       O(n log n)   O(n log n)     O(1)         In-place   False
 8   计数排序    O(n + k)         O(n + k)     O(n + k)       O(k)         Out-place  True
